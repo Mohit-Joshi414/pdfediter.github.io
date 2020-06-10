@@ -1,0 +1,19 @@
+<?php 
+	include 'conn.php';
+?>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    $('#button').click(function(){ 
+        if(!$('#iframe').length) {
+                $('#iframeHolder').html('<iframe name = "iframe1" src="<?php echo $result['document']; ?>" width ="80%" height = "400px">no</iframe>');
+        }
+    });   
+});
+</script>
+ 
+<button id="button">Button</button>
+<div id="iframeHolder"></div>
+
+ 
